@@ -1,5 +1,3 @@
-<p align="center">
-</p>
 <h1 align="center" style="font-weight: bold">
   ADB WSL
 </h1>
