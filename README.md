@@ -17,8 +17,9 @@
 
     Then create a firewall entry, create a new "Inbound" Rule. Select "Port" then Specific TCP port "5037" then "Allow the connection" then check all of Domain, Private and Public and add a name. After the firewall entry is added, open up its properties, go to Scope -> Remote IP Addresses -> Add "172.16.0.0/12".
 
-3.  **VBS Script** (optional)
+3.  **Running**
 
+    *VBS Script* (optional)
     ```shell
     CreateObject("WScript.Shell").Run "%USERPROFILE%\AppData\Local\Android\Sdk\platform-tools\adb.exe kill-server", 0, True
     CreateObject("WScript.Shell").Run "%USERPROFILE%\AppData\Local\Android\Sdk\platform-tools\adb.exe -a -P 5037 nodaemon server", 0, True
@@ -26,6 +27,7 @@
 
     or
     
+    *ADB*
     ```
     adb -a -P 5037 nodaemon server
     ```
